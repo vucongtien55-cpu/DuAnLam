@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dự án — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/products.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand">
+      <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="#1e6fb8" />
+        <text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff">DT</text>
+      </svg>
+      <span class="site-title">DemoTiến</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="/">Trang chủ</a>
+      <a href="/products">Sản phẩm</a>
+      <a href="/projects">Dự án</a>
+      <a href="/news">Tin tức</a>
+      <a href="/#contact">Liên hệ</a>
+      <a href="/admin/dashboard.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main class="products-page">
+  <div class="container products-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-box featured">
+        <h3>🏆 Dự án tiêu biểu</h3>
+        <p style="color: #1e6fb8; font-weight: 600;font-size:14px;">Hợp tác với khách hàng lớn</p>
+        <p style="color:#6b7280;font-size:13px;margin-top:12px;">Chúng tôi cung cấp giải pháp chuyên nghiệp cho các dự án công n ghiệp và xây dựng.</p>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>📞 Liên hệ ngay</h3>
+        <p style="color:#6b7280;font-size:14px;margin:0;">Cần tư vấn dự án?</p>
+        <a href="/#contact" class="btn btn-primary" style="display:block;text-align:center;margin-top:12px;">Gửi yêu cầu</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="products-main">
+      <div class="products-header">
+        <h1>Dự án tiêu biểu</h1>
+        <p class="subtitle">Những dự án đã hoàn thành và đang triển khai của chúng tôi</p>
+      </div>
+
+      <div id="projects-grid" class="grid">
+        <div class="card" style="background:#fff;border-left:4px solid #1e6fb8;">
+          <div class="thumb" style="background:linear-gradient(135deg,#1e6fb8,#3aa0e6);color:#fff;">
+            <div style="font-size:32px;">🏗️</div>
+          </div>
+          <h3>Thi công hệ thống điều hòa trung tâm</h3>
+          <p>Hoàn thành tháng 6/2025 — Tòa nhà văn phòng A</p>
+          <p style="color:#1e6fb8;font-weight:600;margin-top:12px;">→ Xem chi tiết</p>
+        </div>
+
+        <div class="card" style="background:#fff;border-left:4px solid #e74c3c;">
+          <div class="thumb" style="background:linear-gradient(135deg,#e74c3c,#f39c12);color:#fff;">
+            <div style="font-size:32px;">⚙️</div>
+          </div>
+          <h3>Cung cấp thiết bị máy móc công nghiệp</h3>
+          <p>Đang triển khai — Nhà máy sản xuất B</p>
+          <p style="color:#e74c3c;font-weight:600;margin-top:12px;">→ Xem chi tiết</p>
+        </div>
+
+        <div class="card" style="background:#fff;border-left:4px solid #27ae60;">
+          <div class="thumb" style="background:linear-gradient(135deg,#27ae60,#2ecc71);color:#fff;">
+            <div style="font-size:32px;">📋</div>
+          </div>
+          <h3>Tư vấn kỹ thuật hệ thống điện</h3>
+          <p>Hoàn thành tháng 3/2025 — Dự án phát triển C</p>
+          <p style="color:#27ae60;font-weight:600;margin-top:12px;">→ Xem chi tiết</p>
+        </div>
+
+        <div class="card" style="background:#fff;border-left:4px solid #9b59b6;">
+          <div class="thumb" style="background:linear-gradient(135deg,#9b59b6,#8e44ad);color:#fff;">
+            <div style="font-size:32px;">🔧</div>
+          </div>
+          <h3>Bảo trì và hỗ trợ kỹ thuật hàng năm</h3>
+          <p>Hợp đồng dài hạn — Khách hàng D</p>
+          <p style="color:#9b59b6;font-weight:600;margin-top:12px;">→ Xem chi tiết</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> DemoTiến</div>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

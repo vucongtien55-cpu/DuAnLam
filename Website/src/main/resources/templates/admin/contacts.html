@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý liên hệ — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-layout">
+<header class="admin-header">
+  <div class="admin-branding">
+    <a href="/admin/" class="back-link">← Dashboard</a>
+    <h1 style="margin:0;font-size:20px;color:#fff;">Quản lý liên hệ</h1>
+  </div>
+</header>
+
+<div class="admin-container">
+  <sidebar class="admin-sidebar">
+    <nav>
+      <a href="/admin/" class="nav-link">📊 Dashboard</a>
+      <a href="/admin/products" class="nav-link">📦 Sản phẩm</a>
+      <a href="/admin/contacts" class="nav-link active">💬 Liên hệ</a>
+    </nav>
+  </sidebar>
+
+  <main class="admin-main">
+    <h1>Danh sách liên hệ</h1>
+
+    <div style="overflow-x:auto;">
+      <table id="contacts-table" class="admin-table" style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="background:#f0f4f8;">
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Tên</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Email</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Điện thoại</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Ngày</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Trạng thái</th>
+          </tr>
+        </thead>
+        <tbody id="contacts-tbody">
+          <!-- Contacts will be loaded by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <p id="no-data" style="text-align:center;color:#6b7280;padding:32px 0;font-size:15px;">
+      Chưa có liên hệ nào hoặc chưa bao vây API endpoint.
+    </p>
+  </main>
+</div>
+
+<script src="/js/admin-contacts.js"></script>
+</body>
+</html>
+

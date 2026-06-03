@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết sản phẩm — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/products.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand">
+      <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="#1e6fb8" />
+        <text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff">DT</text>
+      </svg>
+      <span class="site-title">DemoTiến</span>
+    </a>
+    <nav class="main-nav">
+      <a href="/">Trang chủ</a>
+      <a href="/products">Sản phẩm</a>
+      <a href="/#contact">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="products-page">
+  <div class="container">
+    <div style="margin-bottom:24px;">
+      <a href="/products" style="color:#1e6fb8;text-decoration:none;font-weight:600;">← Quay lại danh sách</a>
+    </div>
+    <div id="product-detail" style="background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 8px rgba(15,23,36,0.04);">
+      <!-- Product detail will be loaded by JS -->
+    </div>
+    <p id="error-msg" class="error" style="display:none;"></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> DemoTiến</div>
+  </div>
+</footer>
+
+<script src="/js/product-detail.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản trị — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-layout">
+<header class="admin-header">
+  <div class="admin-branding">
+    <a href="/" class="back-link">← DemoTiến</a>
+    <h1 style="margin:0;font-size:20px;color:#fff;">Trang Quản Trị</h1>
+  </div>
+  <a href="/" class="btn btn-ghost" style="color:#fff;">Xem trang chủ</a>
+</header>
+
+<div class="admin-container">
+  <sidebar class="admin-sidebar">
+    <nav>
+      <a href="/admin/" class="nav-link active">📊 Dashboard</a>
+      <a href="/admin/products" class="nav-link">📦 Sản phẩm</a>
+      <a href="/admin/contacts" class="nav-link">💬 Liên hệ</a>
+      <hr style="border:none;border-top:1px solid rgba(15,23,36,0.06);margin:12px 0;">
+      <a href="/" class="nav-link">🏠 Về trang chủ</a>
+    </nav>
+  </sidebar>
+
+  <main class="admin-main">
+    <div style="max-width:900px;">
+      <h1 style="margin-top:0;">Dashboard</h1>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Tổng sản phẩm</div>
+          <div class="stat-value">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Liên hệ mới</div>
+          <div class="stat-value">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Danh mục</div>
+          <div class="stat-value">—</div>
+        </div>
+      </div>
+
+      <div class="card-section">
+        <h2>Hướng dẫn nhanh</h2>
+        <p>Chào mừng đến trang quản trị DemoTiến. Bạn có thể:</p>
+        <ul style="color:#6b7280;line-height:1.8;">
+          <li><strong>Danh sách sản phẩm</strong> — Xem, tạo, sửa, xóa sản phẩm</li>
+          <li><strong>Quản lý liên hệ</strong> — Xem danh sách người liên hệ, đánh dấu đã xử lý</li>
+          <li><strong>Thêm nội dung</strong> — Sử dụng form ở trang sản phẩm để thêm sản phẩm mới</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <h2>Thêm nội dung sau này kiểu gì?</h2>
+        <p>📝 <strong>Cách 1: Qua giao diện web (Editor)</strong></p>
+        <ul style="color:#6b7280;">
+          <li>Vào <strong>/admin/products</strong> → Nút "Tạo sản phẩm mới"</li>
+          <li>Điền form rồi save → Sản phẩm xuất hiện tức thì</li>
+        </ul>
+
+        <p>🗄️ <strong>Cách 2: Trực tiếp vào Database</strong></p>
+        <ul style="color:#6b7280;">
+          <li>Kết nối PostgreSQL qua DBeaver / pgAdmin</li>
+          <li>Chọn bảng <code>product</code>, insert dữ liệu trực tiếp</li>
+          <li>Reload trang web để thấy cập nhật</li>
+        </ul>
+
+        <p>🔗 <strong>Cách 3: Qua API từ bên ngoài</strong></p>
+        <ul style="color:#6b7280;">
+          <li><code>POST /api/admin/products</code> với JSON body</li>
+          <li>Tiện cho automation / mobile app gọi</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  // Mark current nav as active
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.href === window.location.href) link.classList.add('active');
+  });
+</script>
+</body>
+</html>
+

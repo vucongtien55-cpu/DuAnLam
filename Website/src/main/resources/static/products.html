@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh sách sản phẩm — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/products.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand">
+      <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="#1e6fb8" />
+        <text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff">DT</text>
+      </svg>
+      <span class="site-title">DemoTiến</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="/">Trang chủ</a>
+      <a href="/products">Sản phẩm</a>
+      <a href="/#contact">Liên hệ</a>
+      <a href="/admin">Quản trị</a>
+    </nav>
+  </div>
+</header>
+
+<main class="products-page">
+  <div class="container products-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Tìm kiếm</h3>
+        <input type="text" id="search-input" placeholder="Tên sản phẩm..." class="search-field">
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Danh mục</h3>
+        <select id="category-filter" class="category-select">
+          <option value="">Tất cả danh mục</option>
+          <!-- Options populated by JS -->
+        </select>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Giá</h3>
+        <div class="price-range">
+          <label>Từ: <input type="number" id="price-min" placeholder="0"></label>
+          <label>Đến: <input type="number" id="price-max" placeholder="1000000"></label>
+        </div>
+      </div>
+
+      <div class="sidebar-box featured">
+        <h3>Khuyến mãi</h3>
+        <p style="color: #e74c3c; font-weight: 600;">Giảm 20% cho đơn hàng đầu tiên!</p>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="products-main">
+      <div class="products-header">
+        <h1>Danh sách sản phẩm</h1>
+        <p class="subtitle">Chọn sản phẩm yêu thích của bạn từ bộ sưu tập của chúng tôi</p>
+      </div>
+
+      <div id="products-list" class="grid">
+        <!-- Products will be loaded here -->
+      </div>
+
+      <div id="pagination" class="pagination">
+        <!-- Pagination will be here -->
+      </div>
+
+      <p id="error-msg" class="error" style="display:none;"></p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> DemoTiến. Tất cả quyền được bảo lưu.</div>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/products-list.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

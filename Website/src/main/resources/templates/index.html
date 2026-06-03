@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo - Website giống datvinhtien.vn</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <div class="brand">
+      <!-- Inline SVG logo -->
+      <a href="/" class="logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <circle cx="12" cy="12" r="10" fill="#2b6cb0" />
+          <text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff" font-family="Arial">DT</text>
+        </svg>
+        <span class="site-title">DemoTiến</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="#">Sản phẩm</a>
+      <a href="#">Dự án</a>
+      <a href="#">Tin tức</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn">Giỏ hàng</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Chào mừng đến với DemoTiến</h1>
+      <p>Trang demo xây dựng theo phong cách giống website mẫu — hiển thị sản phẩm, dự án, và liên hệ.</p>
+      <a class="btn" href="#products">Xem sản phẩm</a>
+    </div>
+    <div class="hero-image">
+      <div class="product-preview">Ảnh sản phẩm</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="container">
+    <h2 class="section-title">Sản phẩm nổi bật</h2>
+    <div id="products-grid" class="grid">
+      <!-- JS will populate featured products here -->
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p>Phần giới thiệu ngắn: bạn có thể mô tả công ty, năng lực hoặc điểm nổi bật ở đây. Thiết kế responsive, dễ tùy biến.</p>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Liên hệ</h2>
+    <form id="contact-form" class="contact-form">
+      <div class="form-row">
+        <input type="text" id="name" name="name" placeholder="Họ tên" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <textarea id="message" name="message" rows="5" placeholder="Nội dung" required></textarea>
+      <button class="btn" type="submit">Gửi liên hệ</button>
+      <p id="contact-feedback" class="feedback" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> DemoTiến. All rights reserved.</div>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+</body>
+</html>
+

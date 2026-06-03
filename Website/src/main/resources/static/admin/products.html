@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý sản phẩm — DemoTiến</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-layout">
+<header class="admin-header">
+  <div class="admin-branding">
+    <a href="/admin/dashboard.html" class="back-link">← Dashboard</a>
+    <h1 style="margin:0;font-size:20px;color:#fff;">Quản lý sản phẩm</h1>
+  </div>
+</header>
+
+<div class="admin-container">
+  <sidebar class="admin-sidebar">
+    <nav>
+      <a href="/admin/dashboard.html" class="nav-link">📊 Dashboard</a>
+      <a href="/admin/products.html" class="nav-link active">📦 Sản phẩm</a>
+      <a href="/admin/contacts.html" class="nav-link">💬 Liên hệ</a>
+    </nav>
+  </sidebar>
+
+  <main class="admin-main">
+    <h1>Quản lý sản phẩm</h1>
+
+    <button id="btn-create" class="btn btn-primary" style="margin-bottom:20px;">+ Tạo sản phẩm mới</button>
+
+    <form id="product-form" class="product-form" style="display:none; margin-bottom:24px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <label style="display:block;margin-bottom:6px;font-weight:600;">Tên sản phẩm *</label>
+          <input type="text" id="name" placeholder="Nhập tên sản phẩm" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);">
+        </div>
+        <div>
+          <label style="display:block;margin-bottom:6px;font-weight:600;">Giá (VNĐ) *</label>
+          <input type="number" id="price" placeholder="0" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);">
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <label style="display:block;margin-bottom:6px;font-weight:600;">Mô tả ngắn</label>
+        <input type="text" id="shortDesc" placeholder="Mô tả ngắn 1-2 dòng" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);">
+      </div>
+
+      <div style="margin-top:12px;">
+        <label style="display:block;margin-bottom:6px;font-weight:600;">Mô tả chi tiết</label>
+        <textarea id="description" placeholder="Mô tả đầy đủ sản phẩm" rows="5" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);resize:vertical;"></textarea>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <button type="submit" class="btn btn-primary">✓ Lưu sản phẩm</button>
+        <button type="button" id="btn-cancel" class="btn btn-ghost">✕ Hủy</button>
+      </div>
+      <p id="form-msg" style="margin:10px 0 0;"></p>
+    </form>
+
+    <h2 style="margin-top:24px;margin-bottom:12px;">Danh sách sản phẩm</h2>
+    <div style="overflow-x:auto;">
+      <table id="products-table" class="admin-table" style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="background:#f0f4f8;">
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">ID</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Tên sản phẩm</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Giá</th>
+            <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;font-weight:600;">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="products-tbody">
+          <!-- Products will be loaded by JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="/js/admin-products.js"></script>
+</body>
+</html>
+
